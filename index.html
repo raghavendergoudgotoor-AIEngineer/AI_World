@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f3ee" />
+    <meta
+      name="description"
+      content="RAG chatbot is a small, friendly chatbot for everyday questions."
+    />
+    <title>RAG chatbot — Your tiny chat companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="intro-panel" aria-labelledby="intro-title">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>RAG chatbot</span>
+        </div>
+
+        <div class="intro-copy">
+          <p class="eyebrow">YOUR TINY CHAT COMPANION</p>
+          <h1 id="intro-title">A little help,<br /><em>right when</em> you need it.</h1>
+          <p class="intro-text">
+            Ask a question, make a plan, or just say hello. RAG chatbot is here for the small stuff.
+          </p>
+        </div>
+
+        <div class="status-card">
+          <span class="status-icon" aria-hidden="true">✦</span>
+          <div>
+            <strong>Ready when you are</strong>
+            <span>Usually replies in a moment</span>
+          </div>
+        </div>
+
+        <p class="side-note">Simple answers. Friendly energy.</p>
+      </aside>
+
+      <main class="chat-wrap">
+        <section class="chat-card" aria-label="Chat with RAG chatbot">
+          <header class="chat-header">
+            <div class="bot-identity">
+              <div class="avatar" aria-hidden="true">
+                <span class="eye"></span><span class="eye"></span>
+                <span class="smile"></span>
+              </div>
+              <div>
+                <h2>RAG chatbot</h2>
+                <p><span class="online-dot"></span> Online</p>
+              </div>
+            </div>
+            <button class="icon-button" id="resetButton" type="button" aria-label="Start a new chat" title="New chat">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5" />
+              </svg>
+            </button>
+          </header>
+
+          <div class="messages" id="messages" role="log" aria-live="polite" aria-label="Conversation">
+            <div class="date-divider"><span>Today</span></div>
+          </div>
+
+          <div class="quick-prompts" id="quickPrompts" aria-label="Suggested messages">
+            <button type="button" data-prompt="What can you help me with?">What can you do?</button>
+            <button type="button" data-prompt="Tell me something fun">Something fun</button>
+            <button type="button" data-prompt="Help me plan my day">Plan my day</button>
+          </div>
+
+          <form class="composer" id="chatForm">
+            <label class="sr-only" for="messageInput">Message RAG chatbot</label>
+            <textarea
+              id="messageInput"
+              rows="1"
+              maxlength="500"
+              placeholder="Write a message..."
+              autocomplete="off"
+            ></textarea>
+            <button class="send-button" id="sendButton" type="submit" aria-label="Send message" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m5 12 14-7-4.8 14-2.6-5.2L5 12Z" />
+                <path d="m11.6 13.8 3.2-3.2" />
+              </svg>
+            </button>
+          </form>
+          <p class="hint">Press Enter to send <span>•</span> Shift + Enter for a new line</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
